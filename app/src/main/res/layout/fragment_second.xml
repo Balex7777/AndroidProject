@@ -17,11 +17,12 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="150dp"
+        android:layout_width="wrap_content"
         android:layout_height="150dp"
         android:layout_gravity="center"
         android:layout_marginTop="100dp"
-        android:text="НАЧАТЬ" />
+        android:text="НАЧАТЬ"
+        android:textSize="24dp" />
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -35,7 +36,6 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Вдох"
         android:textSize="30dp"
         android:layout_gravity="center"
         android:layout_marginTop="-100dp"/>
