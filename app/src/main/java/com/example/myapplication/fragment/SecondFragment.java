@@ -66,11 +66,11 @@ public class SecondFragment extends Fragment {
             public void run() {
                 while (!Thread.currentThread().isInterrupted()) {
                     inhaleAnimation = ObjectAnimator.ofInt(progressBar, "progress", 0, 100);
-                    inhaleAnimation.setDuration(3000);
+                    inhaleAnimation.setDuration(5000);
                     inhaleAnimation.setInterpolator(new LinearInterpolator());
 
                     exhaleAnimation = ObjectAnimator.ofInt(progressBar, "progress", 100, 0);
-                    exhaleAnimation.setDuration(3000);
+                    exhaleAnimation.setDuration(5000);
                     exhaleAnimation.setInterpolator(new LinearInterpolator());
                     getActivity().runOnUiThread(new Runnable() {
                         @Override
@@ -80,7 +80,7 @@ public class SecondFragment extends Fragment {
                         }
                     });
                     try {
-                        Thread.sleep(3000);
+                        Thread.sleep(5000);
                     } catch (InterruptedException e) {
                         Thread.currentThread().interrupt();
                         return;
@@ -107,7 +107,7 @@ public class SecondFragment extends Fragment {
                         }
                     });
                     try {
-                        Thread.sleep(3000);
+                        Thread.sleep(5000);
                     } catch (InterruptedException e) {
                         Thread.currentThread().interrupt();
                         return;

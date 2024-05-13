@@ -11,11 +11,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
+        android:textSize="24dp"
         tools:layout_editor_absoluteX="41dp"
         tools:layout_editor_absoluteY="43dp"
         tools:ignore="MissingConstraints" />
     <TextView
-        android:id="@+id/price"
+        android:id="@+id/description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
@@ -23,7 +24,7 @@
         tools:layout_editor_absoluteY="43dp"
         tools:ignore="MissingConstraints" />
     <TextView
-        android:id="@+id/description"
+        android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"

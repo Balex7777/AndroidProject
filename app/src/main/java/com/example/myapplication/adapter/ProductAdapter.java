@@ -1,5 +1,6 @@
 package com.example.myapplication.adapter;
 
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,14 +21,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
     private ProductItemBinding productItemBinding;
 
 
-//    public ProductAdapter(ProductItemBinding productItemBinding) {
-//        this.productItemBinding = productItemBinding;
-//    }
-//
-//    public void ProductViewHolder(@NonNull View itemView){
-//        super(itemView);
-//        productItemBinding = ProductItemBinding.bind(itemView);
-//    }
+    public ProductAdapter(){}
 
     @NonNull
     @Override
@@ -57,17 +51,14 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
             productItemBinding = ProductItemBinding.bind(itemView);
         }
         public void bind(Product product){
-            productItemBinding.name.setText(product.name);
-            productItemBinding.price.setText(String.valueOf(product.price));
-            productItemBinding.description.setText(product.description);
+            productItemBinding.name.setText(product.getName());
+            productItemBinding.text.setText(String.valueOf(product.getText()));
+            productItemBinding.description.setText(product.getDescription());
         }
     }
 
     public void Add(Product product){
         products.add(product);
         notifyDataSetChanged();
-
     }
-
-
 }
