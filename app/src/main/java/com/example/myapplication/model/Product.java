@@ -1,15 +1,22 @@
 package com.example.myapplication.model;
 
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+@Entity(tableName = "articles")
 public class Product {
-    private String id;
+    @PrimaryKey(autoGenerate = true)
+    private int id;
+
+    private int id_article;
     private String name;
     private String description;
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -37,10 +44,18 @@ public class Product {
         this.text = text;
     }
 
+    public int getId_article() {
+        return id_article;
+    }
+
+    public void setId_article(int id_article) {
+        this.id_article = id_article;
+    }
+
     private String text;
 
-    public Product(String id, String name, String description, String text){
-        this.id = id;
+    public Product(int id_article, String name, String description, String text){
+        this.id_article = id_article;
         this.name = name;
         this.text = text;
         this.description = description;
