@@ -7,7 +7,7 @@ import android.app.Application;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 
-import com.example.myapplication.database.ProductRepository;
+import com.example.myapplication.data.ProductRepository;
 import com.example.myapplication.model.Product;
 
 import java.util.List;
@@ -34,6 +34,8 @@ public class ProductsViewModel extends AndroidViewModel {
     public void update(Product station) {
         mRepository.update(station);
     }
+
+    public LiveData<List<Product>> getAllArticles(){ return mRepository.getAllStationsList();}
 
     public void updateStations(List<Product> stations) { mRepository.updateStations(stations); }
 

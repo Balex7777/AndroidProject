@@ -30,6 +30,19 @@ public class FirstFragmentViewModel extends AndroidViewModel {
     public void insert(Product station) {
         mRepository.insert(station);
     }
+
+    public void delete(Product article){
+        mRepository.deleteStation(article);
+    }
+
+    public void deleteAll(){
+        mRepository.deleteAll();
+    }
+
+    public LiveData<List<Product>> getAllArticles(){
+        return mRepository.getAllStationsList();
+    }
+
     public void update(Product station) { mRepository.update(station); }
 
     public void updateStations(List<Product> stations) { mRepository.updateStations(stations); }

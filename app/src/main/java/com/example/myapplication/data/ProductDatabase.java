@@ -15,8 +15,6 @@ import java.util.concurrent.Executors;
 @Database(entities = {Product.class}, version = 2, exportSchema = false)
 public abstract class ProductDatabase extends RoomDatabase {
     public abstract ProductDAO stationDAO();
-
-
     private static volatile ProductDatabase INSTANCE;
     private static final int NUMBER_OF_THREADS = 4;
     static final ExecutorService databaseWriteExecutor =

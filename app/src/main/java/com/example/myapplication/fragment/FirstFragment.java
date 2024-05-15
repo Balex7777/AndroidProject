@@ -37,6 +37,7 @@ import com.example.myapplication.model.Product;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class FirstFragment extends Fragment {
     public FragmentFirstBinding binding;
@@ -72,9 +73,12 @@ public class FirstFragment extends Fragment {
 
 
         ProductAdapter allStationAdapter = new ProductAdapter(new ProductAdapter.StationDiff());
+        //FirstFragmentViewModel firstFragmentViewModel = getStationViewModel();
+        //firstFragmentViewModel.insert(new Product(1, "Заголовок 1", "Описание 1", "превью", "Текст 1"));
+
         mStationViewModel.getAllWords().observe(getViewLifecycleOwner(), stationsList -> {
             allStationAdapter.submitList(stationsList);
-            fullStationList = stationsList; // Сохраняем полный список станций
+            fullStationList = stationsList;
 
         });
 

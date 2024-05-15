@@ -2,6 +2,7 @@ package com.example.myapplication.adapter;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,7 @@ import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.myapplication.ArticleActivity;
 import com.example.myapplication.R;
 import com.example.myapplication.databinding.FragmentFirstBinding;
 import com.example.myapplication.databinding.ProductItemBinding;
@@ -68,7 +70,6 @@ public class ProductAdapter extends ListAdapter<Product, ProductAdapter.ProductV
     public class ProductViewHolder extends RecyclerView.ViewHolder {
         private ProductItemBinding addStationItemBinding;
 
-        private Switch switchAlarm;
 
 
 
@@ -78,10 +79,22 @@ public class ProductAdapter extends ListAdapter<Product, ProductAdapter.ProductV
         }
         @SuppressLint("SetTextI18n")
         public void bind(Product station) {
-            addStationItemBinding.name.setText(station.getName());  // добавление названия станции
-
-//            addStationItemBinding.iconStationAdd.setImageResource(IconManager.getIconResource(station.getNumLine()));  // добавление иконки линии
-
+            addStationItemBinding.name.setText(station.getName());
+            addStationItemBinding.description.setText(station.getDescription());
+            //addStationItemBinding.text.setText(station.getText());
+            // Добавляем обработчик щелчка
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Context context = itemView.getContext();
+                    Intent intent = new Intent(context, ArticleActivity.class);
+                    intent.putExtra("article_id", station.getId_article()); // Передаем ID статьи
+                    intent.putExtra("title", station.getName());
+                    intent.putExtra("description", station.getDescription());
+                    intent.putExtra("text", station.getText());
+                    context.startActivity(intent);
+                }
+            });
         }
     }
 
@@ -99,25 +112,6 @@ public class ProductAdapter extends ListAdapter<Product, ProductAdapter.ProductV
                     && Objects.equals(oldItem.getName(), newItem.getName()));
         }
     }
-
-    public void filterById(String text, List<Product> stations) {
-        List<Product> filteredList = new ArrayList<>();
-        if (text.isEmpty()) {
-            filteredList.addAll(stations);
-        } else {
-            String searchText = text.toLowerCase().trim();
-            for (Product station : stations) {
-                if (station.getName().toLowerCase().contains(searchText) && station.getName().toLowerCase().charAt(0)==searchText.toLowerCase().charAt(0)) {
-
-
-                    filteredList.add(station);
-
-                }
-            }
-        }
-        submitList(filteredList);
-    }
-
 
 
     public void updateStationsList(List<Product> stationsList) {
