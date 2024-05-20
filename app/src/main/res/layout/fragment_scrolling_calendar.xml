@@ -1,44 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.FirstFragment">
+    android:fillViewport="true">
 
-    <CalendarView
-        android:id="@+id/calendarView"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"/>
+        android:orientation="vertical"
+        tools:context=".fragment.FirstFragment">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="251dp"
-        android:layout_height="wrap_content"
-        android:text="Каледнарь"
-        android:textSize="34dp"
-        android:layout_marginStart="10dp" />
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Календарь"
+            android:textSize="34sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/daysone_regular"/>
 
+        <CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp" />
 
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="end"
-        android:layout_marginTop="550dp"
-        android:layout_marginRight="5dp"
-        android:onClick="buttonSaveEvent"
-        android:text="Сохранить" />
+        <EditText
+            android:id="@+id/editTextText"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:ems="10"
+            android:gravity="start"
+            android:inputType="textMultiLine"
+            android:lines="5"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp" />
 
-    <EditText
-        android:id="@+id/editTextText"
-        android:layout_width="383dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="100dp"
-        android:ems="10"
-        android:gravity="start"
-        android:inputType="textMultiLine"
-        android:lines="5" />
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="buttonSaveEvent"
+            android:text="Сохранить"
+            android:layout_gravity="end"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/daysone_regular"/>
 
-</FrameLayout>
+    </LinearLayout>
+</ScrollView>

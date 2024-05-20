@@ -12,8 +12,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginStart="10dp"
+        android:fontFamily="@font/daysone_regular"
         android:text="Медитация"
-        android:textSize="34dp" />
+        android:textSize="34dp"
+        android:layout_marginTop="16dp"/>
 
     <Button
         android:id="@+id/button"
@@ -23,7 +25,8 @@
         android:layout_marginTop="100dp"
         android:focusable="true"
         android:text="НАЧАТЬ"
-        android:textSize="24dp" />
+        android:fontFamily="@font/daysone_regular"
+        android:textSize="19dp" />
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -39,6 +42,18 @@
         android:layout_height="wrap_content"
         android:textSize="30dp"
         android:layout_gravity="center"
-        android:layout_marginTop="-100dp"/>
+        android:layout_marginTop="-100dp"
+        android:fontFamily="@font/daysone_regular"/>
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="80dp"
+        android:textSize="16dp"
+        android:fontFamily="@font/daysone_regular"
+        android:text="Квадратное дыхание – это упражнение, в котором нужно дышать на счет 5. То есть при выполнении каждого шага нужно считать до 5: вдох, задержка дыхания, выдох и снова задержка дыхания. Это техника помогает освободиться от эмоций и успокоиться." />
 
 </FrameLayout>

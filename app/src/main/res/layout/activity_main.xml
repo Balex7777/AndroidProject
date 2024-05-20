@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fotoram_io"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -17,26 +18,33 @@
         android:id="@+id/tl"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true">
+        android:background="#0000"
+        app:tabIndicatorColor="@color/blue"
+        app:tabTextAppearance="@style/TabTextAppearance"
+        app:tabTextColor="@color/tab_text_color_selector">
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/daysone_regular"
             android:text="Главная" />
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/daysone_regular"
             android:text="Медитация" />
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/daysone_regular"
             android:text="Календарь" />
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/daysone_regular"
             android:text="Профиль" />
 
     </com.google.android.material.tabs.TabLayout>

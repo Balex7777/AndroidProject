@@ -8,10 +8,12 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp"
         android:text="Профиль"
-        android:textSize="34dp" />
+        android:textSize="34dp"
+        android:fontFamily="@font/daysone_regular"/>
 
     <ImageView
         android:id="@+id/imageView"
@@ -27,7 +29,40 @@
         android:layout_height="wrap_content"
         android:text="user_25734892"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="220dp"/>
+        android:layout_marginTop="220dp"
+        android:fontFamily="@font/daysone_regular"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="260dp"
+        android:text="Фамилия: Иванов"
+        android:fontFamily="@font/daysone_regular"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="300dp"
+        android:text="Имя: Иван"
+        android:fontFamily="@font/daysone_regular"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="340dp"
+        android:text="Пол: Мужской"
+        android:fontFamily="@font/daysone_regular"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="380dp"
+        android:text="Возраст: 19"
+        android:fontFamily="@font/daysone_regular"/>
 
     <Button
         android:id="@+id/button2"
@@ -36,6 +71,7 @@
         android:text="Выйти"
         android:layout_gravity="bottom|end"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="20dp"/>
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/daysone_regular"/>
 
 </FrameLayout>

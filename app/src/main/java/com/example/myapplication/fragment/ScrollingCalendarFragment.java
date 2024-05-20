@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 import androidx.annotation.NonNull;
@@ -44,13 +45,8 @@ public class ScrollingCalendarFragment extends Fragment {
             }
         });
 
-        //databaseReference = FirebaseDatabase.getInstance().getReference("Calendar");
+        databaseReference = FirebaseDatabase.getInstance().getReference("Calendar");
 
-
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("message");
-        myRef.setValue("Hello, World!");
-        Log.d("ScrollingCalendarFragment", "test");
         buttonSaveEvent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
