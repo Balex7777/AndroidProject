@@ -1,14 +1,13 @@
 {
   "project_info": {
-    "project_number": "871472580628",
-    "firebase_url": "https://baseforandroid-ae4df-default-rtdb.firebaseio.com",
-    "project_id": "baseforandroid-ae4df",
-    "storage_bucket": "baseforandroid-ae4df.appspot.com"
+    "project_number": "725968434153",
+    "project_id": "androidbase-4e4d7",
+    "storage_bucket": "androidbase-4e4d7.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:871472580628:android:a3de809ee001b8964fff01",
+        "mobilesdk_app_id": "1:725968434153:android:06d685e9043612d1aed178",
         "android_client_info": {
           "package_name": "com.example.myapplication"
         }
@@ -16,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyDawl2LJYfiP4tA-Z6svrnRk_RwNno7Ewc"
+          "current_key": "AIzaSyDOZtCMpsKUNXZQD_U3TCnIlZhRYf2H9ck"
         }
       ],
       "services": {
