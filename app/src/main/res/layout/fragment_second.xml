@@ -6,8 +6,6 @@
     android:gravity="center"
     tools:context=".fragment.SecondFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -50,10 +48,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
         android:layout_marginTop="80dp"
-        android:textSize="16dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/round"
+        android:backgroundTint="@color/common_google_signin_btn_text_light_disabled"
+
         android:fontFamily="@font/daysone_regular"
-        android:text="Квадратное дыхание – это упражнение, в котором нужно дышать на счет 5. То есть при выполнении каждого шага нужно считать до 5: вдох, задержка дыхания, выдох и снова задержка дыхания. Это техника помогает освободиться от эмоций и успокоиться." />
+        android:padding="5dp"
+        android:text="Квадратное дыхание – это упражнение, в котором нужно дышать на счет 5. То есть при выполнении каждого шага нужно считать до 5: вдох, задержка дыхания, выдох и снова задержка дыхания. Это техника помогает освободиться от эмоций и успокоиться."
+        android:textSize="16dp" />
 
 </FrameLayout>

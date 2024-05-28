@@ -27,10 +27,20 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp" />
 
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1.1.2000"
+            android:textSize="20sp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/daysone_regular"/>
+
         <EditText
             android:id="@+id/editTextText"
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="140dp"
             android:ems="10"
             android:gravity="start"
             android:inputType="textMultiLine"
